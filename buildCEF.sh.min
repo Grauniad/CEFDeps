@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [[ "$1" == "" ]]; then
+    DEPS_ROOT="$PWD/deps"
+else
+    DEPS_ROOT="$1"
+fi
+
+pushd $DEPS_ROOT/cef_3_3/cef_binary_3.3359.1772.gd1df190_linux64_minimal
+
+cmake .
+
+make -j 8 libcef_dll_wrapper BUILDTYPE=Debug
+make -j 8 libcef_dll_wrapper BUILDTYPE=Release
+
+cp  libcef_dll_wrapper/libcef_dll_wrapper.a Release/
+mv Resources/* Release/
+
+#echo "Giving SUID permissions to chrome-sandbox..."
+#echo "(using sudo so you may be asked for your password)"
+
+#sudo -- chown root:root Release/chrome-sandbox 
+#sudo -- chmod 4755 Release/chrome-sandbox
+
+cp cmake/* ../../build/lib/cmake/
+
+echo "CEF_DIR = $PWD"
