@@ -22,3 +22,7 @@ buildList[cef_3_3]="cef_binary_3.3359.1772.gd1df190_linux64_minimal"
 
 
 source $DEPS_ROOT/CMakeUtils/build_tools/buildDepsCommon.sh || exit 1
+
+
+DEPS_ROOT=$DEPS_ROOT DEPS_BUILD=$DEPS_BUILD make -e || exit 1
+DEPS_ROOT=$DEPS_ROOT DEPS_BUILD=$DEPS_BUILD make -e install || exit 1
