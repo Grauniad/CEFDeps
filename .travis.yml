@@ -1,0 +1,15 @@
+sudo: false
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - cmake
+      - cmake-data
+
+before_install:
+  - git clone https://github.com/Grauniad/CMakeUtils.git
+
+install:
+  - ./buildDeps.sh
