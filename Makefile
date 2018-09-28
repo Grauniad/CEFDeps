@@ -1,4 +1,4 @@
-CEF_BUILD=$(DEPS_ROOT)/cef_3_3/cef_binary_3.3359.1772.gd1df190_linux64_minimal/
+CEF_BUILD=$(DEPS_ROOT)/cef_3_3/cef_binary_3.3497.1836.gb472a8d_linux64_minimal
 all:
 	./buildCEF.sh.min $(DEPS_ROOT)
 
