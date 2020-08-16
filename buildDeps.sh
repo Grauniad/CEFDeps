@@ -12,10 +12,10 @@ else
 fi
 
 declare -A bzipList
-bzipList[cef_3_3]="http://opensource.spotify.com/cefbuilds/cef_binary_3.3497.1836.gb472a8d_linux64_minimal.tar.bz2"
+bzipList[cef_3_3]="http://opensource.spotify.com/cefbuilds/cef_binary_84.4.1%2Bgfdc7504%2Bchromium-84.0.4147.105_linux64_minimal.tar.bz2"
 
 declare -A buildList
-buildList[cef_3_3]="cef_binary_3.3497.1836.gb472a8d_linux64_minimal"
+buildList[cef_3_3]='cef_binary_84.4.1+gfdc7504+chromium-84.0.4147.105_linux64_minimal'
 
 
 

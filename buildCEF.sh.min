@@ -6,7 +6,7 @@ else
     DEPS_ROOT="$1"
 fi
 
-pushd $DEPS_ROOT/cef_3_3/cef_binary_3.3497.1836.gb472a8d_linux64_minimal
+pushd $DEPS_ROOT/cef_3_3/cef_binary_84.4.1+gfdc7504+chromium-84.0.4147.105_linux64_minimal
 
 cmake .
 
